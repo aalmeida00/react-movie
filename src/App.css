@@ -32,14 +32,51 @@ small {
   text-align: center;
 }
 
-.search-bar {
+.form {
+  display: grid;
 }
 
 .form--label {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
 }
 
 .form--input {
+  font-size: 1.6rem;
+  padding: 0.5rem 2rem;
+  line-height: 2.8rem;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
 }
 
 .form--button {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.form--button:hover {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.search-bar {
+}
+
+@media (min-width: 786px) {
+  .form {
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1rem;
+    align-items: center;
+  }
+
+  .form--input {
+    margin-bottom: 0;
+  }
 }
