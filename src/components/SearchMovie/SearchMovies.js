@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SearchMovies = () => {
   const procurarLivros = async (e) => {
     e.preventDefault();
-    const query = 'Avengers';
-    const url = `https://api.themoviedb.org/3/movie/550?api_key=9adfe29ab2c581d7d5fae07da955d98d&language=en-US${query}`;
-
+    const query = 'Jurassic Park';
+    const api_key = '9adfe29ab2c581d7d5fae07da955d98d';
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${query}`;
     try {
       const res = await fetch(url);
       const data = await res.json();
